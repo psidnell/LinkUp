@@ -117,11 +117,22 @@ On the Mac, selecting a calendar entry and activating Copy via KM will yield the
 
 ### Obsidian (Source, Destination)
 
-TBD
+- [Link-Obsidian](Link-Obsidian.kmmacros)
+- [LinkFrom-Obsidian](LinkFrom-Obsidian.shortcut)
+- [ShareFrom-Obsidian](ShareFrom-Obsidian.shortcut)
+- [LinkTo-Obsidian](LinkTo-Obsidian.shortcut)
 
-### OmniFocus (Source, Destination) 
+When Obsidian is a source on the Mac, the KM macro assumes that the [Advanced URI Plugin](https://publish.obsidian.md/advanced-uri-doc/Home) is installed in Obsidian to ensure that the URL it extracts continues to work even if the if the source is renamed.
 
-TBD
+When Obsidian is used as a destination, the file is created directly in the file system **where I keep my vault in iCloud**. This needs some work to make it more portable. I do this as I have noticed that creating the note using the Advanced URI scheme is not reliable, especially on iOS. If the application hasn't been launched in a while then it may not have finished loading the plugins and won't understand the Advanced URI parameters it's given.
+
+I expect I'll be revisiting this.
+
+### OmniFocus Tasks (Source, Destination) 
+
+When used as a source, ether on the Mac or iOS, OmniFocus provides a URL for the task. The shortcut can look up the task with that URL and extract the Title and Note.
+
+When used as a destination, task creation is straightforward.
 
 ### Other Simple Destination Cases
 
