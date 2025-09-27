@@ -18,7 +18,7 @@ On iOS/iPadOS the process is:
 2. **Choose**: a destination application from a menu.
 3. **Create**: an entry in the destination app which opens populated with a title, note and link back to the original item if possible.
 
-The capture and choose steps are common across MacOS and iOS/iPadOS.
+The choose and Create steps are common between MacOS and iOS/iPadOS, using the same shortcuts.
 
 For example, suppose you are in Safari on a Mac and you want to create a note from the current page. Just hit the hot key sequence, and choose Notes. 
 
@@ -36,44 +36,30 @@ This is a collection of Keyboard Maestro macros and Siri Shortcuts that fall int
 
 **1. Capture**
 
-On MacOS this is done with a mix of Keyboard Maestro (KM) scripts (```Link-<AppName>```). KM gathers information from the application, builds a dictionary with parameters and then calls the shortcut.
+On MacOS capture is done with Keyboard Maestro (KM) macros (```Link-<AppName>```). KM gathers information from the application using a variety of dark spells, builds a dictionary with various parameters.
 
-On iOS/iPadOS this is done with shortcuts (```ShareFrom-<AppName>```) configured as share targets.
+On iOS/iPadOS capture is done with via the system share menu to Siri Shortcuts (```ShareFrom-<AppName>```) configured as share targets.
 
-Both of the above then call a common set of shortcuts (```LinkFrom-<AppName>```) that do whatever additional work is required to fill in the parameter dictionary to include:
+Both of the above then call a common set of shortcuts (```LinkFrom-<AppName>```) that do whatever additional work is required to fill in any missing parameters as best they can to include:
 
 - Title
 - Note
 - URL
 - Latitude, Longitude (for locations)
 
-This is then passed to a single shortcut in step 2.
+These parameters are then passed to a single shortcut in step 2.
 
 **2. Destination Choice**
 
-This is a single shortcut that prompts the user for the destination application.
+This is a single common shortcut that prompts the user for the destination application, calling the final app specific creation shortcut in step 3.
 
 **3. Create Chosen Item**
 
-This is a set of shortcuts (```LinkTo-<AppName>```) that builds whatever you asked for in step 2 and ideally opens it.
+This is a set of shortcuts (```LinkTo-<AppName>```) that builds whatever content you asked for in step 2 and ideally opens it for verification.
 
 ## Supported Applications
 
-Source Applications:
-- Mail (Mac Only)
-- Safari
-- OmniFocus
-- Calendar
-- Obsidian
-- Apple Maps
-
-Destination Applications:
-- OmniFocus
-- Obsidian
-- Tot
-- Apple Notes
-- Webloc files
-
+Applications are either Sources (which can be linked from) or Destinations which can be linked to. 
 ### Safari (Source)
 
 - KM: [Link-Safari](Link-Safari.kmmacros)
@@ -114,9 +100,20 @@ Apple seems to have recently changed Maps to share a shortened URL rather than e
 
 **Note**: The address from the expanded URL and also links to the same location in several other maps services like Google Maps, Open Street Map and the Ordnance Survey.
 
-### Calendar (Source)
+### Calendar (Source, Mac Only)
 
-TBD
+- KM: [Link-Calendar](Link-Calendar.kmmacros)
+- Shortcut: [LinkFrom-Calendar](LinkFrom-Calendar.shortcut)
+
+Unfortunately there is no useful share functionality in iOS/iPadOS.
+
+On the Mac, selecting a calendar entry and activating Copy via KM will yield the title and the scheduling information on several lines in the clipboard. An annoying alert can pop up to warn if this is a repeating event and KM has to notice and dismiss this. The shortcut snips the title from the first line and then hunts for the calendar event by name, prompting for which one is wanted if it finds more than one. Once we have the event in the shortcut we can extract all the info we need for the note.
+
+**Title**: From the Event found by looking up the title from KM.
+
+**Note**: From the Event found by looking up the title from KM. Use any attached note text and the location.
+
+**URL**: There is currently no URL Scheme for Calendar so we can't link back to the source. However if there is a URL associated with the event then that will be used.
 
 ### Obsidian (Source, Destination)
 
