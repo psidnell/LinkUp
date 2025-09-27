@@ -76,8 +76,8 @@ Destination Applications:
 
 ### Safari (Source)
 
-- [Link-Safari](Link-Safari.kmmacros)
-- [LinkFrom-WebPage](LinkFrom-WebPage.shortcut)
+- KM: [Link-Safari](Link-Safari.kmmacros)
+- Shortcut: [LinkFrom-WebPage](LinkFrom-WebPage.shortcut)
 
 **URL**: In Safari it's quite easy to capture the URL, KM can easily capture the current URL and on iOS/iPadOS the url can be shared.
 
@@ -87,8 +87,8 @@ Destination Applications:
 
 ### Mail (Source, Mac Only)
 
-- [Link-Mail](Link-Mail.kmmacros)
-- [LinkFrom-Mail](LinkFrom-Mail.shortcut)
+- KM: [Link-Mail](Link-Mail.kmmacros)
+- Shortcut: [LinkFrom-Mail](LinkFrom-Mail.shortcut)
 
 Unfortunately iOS/iPadOS do not provide a share menu from Mail.
 
@@ -100,16 +100,16 @@ Unfortunately iOS/iPadOS do not provide a share menu from Mail.
 
 ### Maps (Source)
 
-- [Link-Maps](Link-Maps.kmmacros)
-- [LinkFrom-Maps](LinkFrom-Maps.shortcut)
-- [ShareFrom-Maps](ShareFrom-Maps.shortcut)
+- KM: [Link-Maps](Link-Maps.kmmacros)
+- Shortcut: [LinkFrom-Maps](LinkFrom-Maps.shortcut)
+- Shortcut: [ShareFrom-Maps](ShareFrom-Maps.shortcut)
 
-Apple seems to have recently changed Maps to share a shortened URL rather than either a URL with parameters or a "Location" object. Also the new Liquid Glass UI breaks the the KM feature that can find the menu hidden behind the ```...``` menu which is where Copy Coordinates hides on the Mac. This eliminates any documented way of extracting any information from what's shared from Maps. However after some experimentation I discovered that ```Expand URL``` in Shortcuts will take the shortened URL and return one that contains the address and coordinates.
+Apple seems to have recently changed Maps to share a shortened URL rather than either a URL with parameters or a "Location" object. Also the new Liquid Glass UI breaks the the KM feature that can find the menu hidden behind the ```...``` menu which is where Copy Coordinates hides on the Mac. This eliminates any documented way of extracting any information from what's shared from Maps. However after some experimentation I discovered that ```Expand URL``` in Shortcuts will take the shortened URL and return one that contains the name, address and coordinates.
 
 **URL**: Use the shortened one.
 
 **Title**: Use the **name** from the expanded URL.
 
-**Latitude/Logitude**: From the expanded URL:
+**Latitude/Longitude**: From the expanded URL:
 
 **Note**: The address from the expanded URL and also links to the same location in several other maps services like Google Maps, Open Street Map and the Ordnance Survey.
