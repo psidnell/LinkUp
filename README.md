@@ -29,22 +29,6 @@ This creates the following Apple Notes note:
 ![Step 3](step-3.png)
 
 The main difficulty is capture in circumstances where the source application may not conveniently provide the information we want. This will be discussed on a case by case basis later.
-## Supported Applications
-
-Source Applications:
-- Mail (Mac Only)
-- Safari
-- OmniFocus
-- Calendar
-- Obsidian
-- Apple Maps
-
-Destination Applications:
-- OmniFocus
-- Obsidian
-- Tot
-- Apple Notes
-- Webloc files
 
 ## Structure
 
@@ -72,4 +56,32 @@ This is a single shortcut that prompts the user for the destination application.
 **3. Create Chosen Item**
 
 This is a set of shortcuts (```LinkTo-<AppName>```) that builds whatever you asked for in step 2 and ideally opens it.
+
+## Supported Applications
+
+Source Applications:
+- Mail (Mac Only)
+- Safari
+- OmniFocus
+- Calendar
+- Obsidian
+- Apple Maps
+
+Destination Applications:
+- OmniFocus
+- Obsidian
+- Tot
+- Apple Notes
+- Webloc files
+
+### Safari (Source)
+
+- [Link-Safari.kmmacros](Link-Safari.kmmacros)
+- [LinkFrom-WebPage.shortcut](LinkFrom-WebPage.shortcut])
+
+**URL**: In Safari it's quite easy to capture the URL, KM can easily capture the current URL and on iOS/iPadOS the url can be shared.
+
+**Title**: In the shortcut we use URL and **Get Article using Safari Reader**. This provides the title.
+
+**Note**: The article we fetched above also contains the content, which we optionally pass to the local Apple AI model to generate a summary.
 
