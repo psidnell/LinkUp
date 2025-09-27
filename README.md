@@ -83,14 +83,14 @@ Destination Applications:
 
 **Title**: In the shortcut we use URL and **Get Article using Safari Reader**. This provides the title.
 
-**Note**: The article we fetched above also contains the content, which we optionally pass to the local Apple AI model to generate a summary.
+**Note**: The article we fetched above also contains the content, which we optionally pass to the local Apple AI Summarize feature.
 
 ### Mail (Source, Mac Only)
 
 - KM: [Link-Mail](Link-Mail.kmmacros)
 - Shortcut: [LinkFrom-Mail](LinkFrom-Mail.shortcut)
 
-Unfortunately iOS/iPadOS do not provide a share menu from Mail.
+Unfortunately iOS/iPadOS do not provide a share menu from Mail or any particularly useful Shortcuts actions for accessing mail.
 
 **URL**: KM has to use a fragment of AppleScript to get a mail URL.
 
