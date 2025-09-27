@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This is a project that allows the easy creation of files that link between applications on MacOS/iOS. 
+This is a project that allows the easy creation of files that link between applications on MacOS/iOS. A familiarity with Keyboard Maestro and Siri Shortcuts is assumed.
 
-For example when in Mail, Maps, Calendar, Safari etc. easily create a todo or note with a useful title, content and link back to the original item.
+**Usage**: for example when in Mail, Maps, Calendar, Safari etc. easily create a todo or note with a useful title, content and link back to the original item.
 
 On a Mac the process is:
 
@@ -19,6 +19,14 @@ On iOS/iPadOS the process is:
 3. **Create**: an entry in the destination app which opens populated with a title, note and link back to the original item if possible.
 
 The capture and choose steps are common across MacOS and iOS/iPadOS.
+
+For example, suppose you are in Safari on a Mac and you want to create a note from the current page. Just hit the hot key sequence, and choose Notes. 
+
+![Step 2](step-2.png)
+
+This creates the following Apple Notes note:
+
+![Step 3](step-3.png)
 
 The main difficulty is capture in circumstances where the source application may not conveniently provide the information we want. This will be discussed on a case by case basis later.
 ## Supported Applications
