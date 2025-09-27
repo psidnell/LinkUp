@@ -76,12 +76,25 @@ Destination Applications:
 
 ### Safari (Source)
 
-- [Link-Safari.kmmacros](Link-Safari.kmmacros)
-- [LinkFrom-WebPage.shortcut](LinkFrom-WebPage.shortcut])
+- [Link-Safari](Link-Safari.kmmacros)
+- [LinkFrom-WebPage](LinkFrom-WebPage.shortcut)
 
 **URL**: In Safari it's quite easy to capture the URL, KM can easily capture the current URL and on iOS/iPadOS the url can be shared.
 
 **Title**: In the shortcut we use URL and **Get Article using Safari Reader**. This provides the title.
 
 **Note**: The article we fetched above also contains the content, which we optionally pass to the local Apple AI model to generate a summary.
+
+### Mail (Source, Mac Only)
+
+- [Link-Mail](Link-Mail.kmmacros)
+- [LinkFrom-Mail](LinkFrom-Mail.shortcut)
+
+Unfortunately iOS/iPadOS do not provide a share menu from Mail.
+
+**URL**: KM has to use a fragment of AppleScript to get a mail URL.
+
+**Title**: captured with KM.
+
+**Note**: This is empty.
 
