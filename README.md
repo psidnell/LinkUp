@@ -4,7 +4,7 @@
 
 This is a project that allows the easy creation of files that link between applications on MacOS/iOS. A familiarity with Keyboard Maestro and Siri Shortcuts is assumed.
 
-**Usage**: for example when in Mail, Maps, Calendar, Safari etc. easily create a todo or note with a useful title, content and link back to the original item.
+**Usage**: for example when in Mail, Maps, Calendar, Safari etc. easily create a todo or note with a useful title, content and link back to the original item (where supported).
 
 On a Mac the process is:
 
@@ -124,13 +124,15 @@ On the Mac, selecting a calendar entry and activating Copy via KM will yield the
 
 When Obsidian is a source on the Mac, the KM macro assumes that the [Advanced URI Plugin](https://publish.obsidian.md/advanced-uri-doc/Home) is installed in Obsidian to ensure that the URL it extracts continues to work even if the if the source is renamed.
 
-When Obsidian is used as a destination, the file is created directly in the file system **where I keep my vault in iCloud**. This needs some work to make it more portable. I do this as I have noticed that creating the note using the Advanced URI scheme is not reliable, especially on iOS. If the application hasn't been launched in a while then it may not have finished loading the plugins and won't understand the Advanced URI parameters it's given.
+When Obsidian is used as a destination, the file is created directly in the file system **where I keep my vault in iCloud, you will need to change this**. This needs some work to make it more portable. I do this as I have noticed that creating the note using the Advanced URI scheme is not reliable, especially on iOS. If the application hasn't been launched in a while then it may not have finished loading the plugins and won't understand the Advanced URI parameters it's given.
 
-I expect I'll be revisiting this.
+It would obviously be better if I used the native capabilities of Obsidian to create a note, I expect I'll be revisiting this.
 
-### OmniFocus Tasks (Source, Destination) 
+### OmniFocus (Source, Destination) 
 
 When used as a source, ether on the Mac or iOS, OmniFocus provides a URL for the task. The shortcut can look up the task with that URL and extract the Title and Note.
+
+Currently only tasks work as sources, I'd like to get tags, projects and folders working too.
 
 When used as a destination, task creation is straightforward.
 
