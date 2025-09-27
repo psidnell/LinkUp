@@ -83,7 +83,7 @@ Destination Applications:
 
 **Title**: In the shortcut we use URL and **Get Article using Safari Reader**. This provides the title.
 
-**Note**: The article we fetched above also contains the content, which we optionally pass to the local Apple AI Summarize feature.
+**Note**: The article fetched above also contains the content, which can be passed to the local Apple AI Summarize feature. This as an option since it can go wrong if not enough content can be extracted from the URL.
 
 ### Mail (Source, Mac Only)
 
@@ -104,7 +104,7 @@ Unfortunately iOS/iPadOS do not provide a share menu from Mail or any particular
 - Shortcut: [LinkFrom-Maps](LinkFrom-Maps.shortcut)
 - Shortcut: [ShareFrom-Maps](ShareFrom-Maps.shortcut)
 
-Apple seems to have recently changed Maps to share a shortened URL rather than either a URL with parameters or a "Location" object. Also the new Liquid Glass UI breaks the the KM feature that can find the menu hidden behind the ```...``` menu which is where Copy Coordinates hides on the Mac. This eliminates any documented way of extracting any information from what's shared from Maps. However after some experimentation I discovered that ```Expand URL``` in Shortcuts will take the shortened URL and return one that contains the name, address and coordinates.
+Apple seems to have recently changed Maps to share a shortened URL rather than either a URL with parameters or a "Location" object for Shortcuts. Also the new Liquid Glass UI breaks the KM feature that can find the menu hidden behind the ```...``` by searching for an image - which is where Copy Coordinates hides on the Mac. This eliminates any documented way of extracting any information from what's shared from Maps. However after some experimentation I discovered that ```Expand URL``` in Shortcuts will take the shortened URL and return one that contains the name, address and coordinates.
 
 **URL**: Use the shortened one.
 
@@ -113,3 +113,25 @@ Apple seems to have recently changed Maps to share a shortened URL rather than e
 **Latitude/Longitude**: From the expanded URL:
 
 **Note**: The address from the expanded URL and also links to the same location in several other maps services like Google Maps, Open Street Map and the Ordnance Survey.
+
+### Calendar (Source)
+
+TBD
+
+### Obsidian (Source, Destination)
+
+TBD
+
+### OmniFocus (Source, Destination) 
+
+TBD
+
+### Other Simple Destination Cases
+
+These are pretty straight forward and don't need further explanation, making trivial use of Title, URL and Notes data captured from the Source.
+
+- **Notes** (Destination).
+- **[Tot](https://tot.rocks)** (Destination).
+- **Webloc** (Destination) - A webloc file created on the desktop.
+- **Clipboard**: (Destination).
+- **Markdown** Link and Paragraph formats left in the clipboard.
