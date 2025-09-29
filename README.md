@@ -122,11 +122,14 @@ On the Mac, selecting a calendar entry and activating Copy via KM will yield the
 - [ShareFrom-Obsidian](ShareFrom-Obsidian.shortcut)
 - [LinkTo-Obsidian](LinkTo-Obsidian.shortcut)
 
-When Obsidian is a source on the Mac, the KM macro assumes that the [Advanced URI Plugin](https://publish.obsidian.md/advanced-uri-doc/Home) is installed in Obsidian to ensure that the URL it extracts continues to work even if the if the source is renamed.
+When Obsidian is a source on the Mac, the KM macro assumes that the [Advanced URI Plugin](https://publish.obsidian.md/advanced-uri-doc/Home) is installed in Obsidian to ensure that the URL it extracts continues to work even if the if the source is renamed. This also links to the correct vault.
 
-When Obsidian is used as a destination, the file is created directly in the file system **where I keep my vault in iCloud, you will need to change this**. This needs some work to make it more portable. I do this as I have noticed that creating the note using the Advanced URI scheme is not reliable, especially on iOS. If the application hasn't been launched in a while then it may not have finished loading the plugins and won't understand the Advanced URI parameters it's given.
+When Obsidian is used as a destination, the file is created using the default Obsidian URI scheme in a vault and folder defined in the shortcut, these will need to be modified to suit your needs and are defined at the top of the shortcut. 
 
-It would obviously be better if I used the native capabilities of Obsidian to create a note, I expect I'll be revisiting this.
+Various front matter properties are added.
+
+- id: a unique ID compatible with the Advanced URI plugin so that the new note can be opened on creation using it.
+- location: If the source was Maps then a location property is created with Latitude and Longitude. This is compatible with the [Map View Plugin](https://github.com/esm7/obsidian-map-view) if used, but not required.
 
 ### OmniFocus (Source, Destination) 
 
