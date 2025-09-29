@@ -124,7 +124,7 @@ On the Mac, selecting a calendar entry and activating Copy via KM will yield the
 
 When Obsidian is a source on the Mac, the KM macro assumes that the [Advanced URI Plugin](https://publish.obsidian.md/advanced-uri-doc/Home) is installed in Obsidian to ensure that the URL it extracts continues to work even if the if the source is renamed. This also links to the correct vault.
 
-When Obsidian is used as a destination, the file is created using the default Obsidian URI scheme in a vault and folder defined in the shortcut, these will need to be modified to suit your needs and are defined at the top of the shortcut. 
+When Obsidian is used as a destination, the file is created using the default Advanced  URI URL scheme in a vault and folder defined in the shortcut, these will need to be modified to suit your needs and are defined at the top of the shortcut. 
 
 Various front matter properties are added.
 
